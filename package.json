@@ -1,0 +1,37 @@
+{
+  "name": "puck-mui-components",
+  "version": "0.0.1",
+  "description": "MUI Components for the Puck Editor",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prettier": "prettier -l \"src/**/*.{ts,tsx}\" \"demo/**/*.{ts,tsx}\"",
+    "prettier:fix": "prettier -lw \"src/**/*.{ts,tsx}\" \"demo/**/*.{ts,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peoplekit/puck-mui-components.git"
+  },
+  "keywords": [
+    "Puck",
+    "Editor",
+    "MUI",
+    "Components"
+  ],
+  "author": "Greg Frasco <greg@peoplekit.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peoplekit/puck-mui-components/issues"
+  },
+  "homepage": "https://github.com/peoplekit/puck-mui-components#readme",
+  "peerDependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@measured/puck": "^0.15.0",
+    "@mui/material": "^5.16.7"
+  },
+  "devDependencies": {
+    "prettier": "3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
