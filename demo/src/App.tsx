@@ -1,20 +1,7 @@
 import { Puck, Config } from "@measured/puck";
 import "@measured/puck/puck.css";
-
-const config: Config = {
-  components: {
-    HeadingBlock: {
-      fields: {
-        children: {
-          type: "text"
-        }
-      },
-      render: ({ children }) => {
-        return <h1>{children}</h1>;
-      }
-    }
-  }
-};
+import { config as c } from "../../src";
+const config: Config = c;
 
 // Describe the initial data
 const initialData = {};
