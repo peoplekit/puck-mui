@@ -1,6 +1,6 @@
-import { Puck, Config } from "@measured/puck";
-import "@measured/puck/puck.css";
-import { config as c } from "../../src";
+import { Puck, Config } from '@measured/puck';
+import '@measured/puck/puck.css';
+import { config as c } from '../../src';
 const config: Config = c;
 
 // Describe the initial data

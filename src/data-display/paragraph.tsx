@@ -1,72 +1,72 @@
-import React from "react";
-import { ComponentConfig } from "@measured/puck";
-import { Typography } from "@mui/material";
+import React from 'react';
+import { ComponentConfig } from '@measured/puck';
+import { Typography } from '@mui/material';
 
 export const Paragraph: ComponentConfig = {
-  label: "Paragraph",
+  label: 'Paragraph',
   fields: {
     text: {
-      type: "textarea"
+      type: 'textarea'
     },
     variant: {
-      type: "select",
+      type: 'select',
       options: [
         {
-          value: "body1",
-          label: "Body 1"
+          value: 'body1',
+          label: 'Body 1'
         },
         {
-          value: "body2",
-          label: "Body 2"
+          value: 'body2',
+          label: 'Body 2'
         },
         {
-          value: "subtitle1",
-          label: "Subtitle 1"
+          value: 'subtitle1',
+          label: 'Subtitle 1'
         },
         {
-          value: "caption",
-          label: "Caption"
+          value: 'caption',
+          label: 'Caption'
         },
         {
-          value: "inherit",
-          label: "Inherit"
+          value: 'inherit',
+          label: 'Inherit'
         },
         {
-          value: "h6",
-          label: "H6"
+          value: 'h6',
+          label: 'H6'
         }
       ]
     },
     align: {
-      type: "select",
+      type: 'select',
       options: [
         {
-          value: "left",
-          label: "Left"
+          value: 'left',
+          label: 'Left'
         },
         {
-          value: "center",
-          label: "Center"
+          value: 'center',
+          label: 'Center'
         },
         {
-          value: "right",
-          label: "Right"
+          value: 'right',
+          label: 'Right'
         },
         {
-          value: "justify",
-          label: "Justify"
+          value: 'justify',
+          label: 'Justify'
         },
         {
-          value: "inherit",
-          label: "Inherit"
+          value: 'inherit',
+          label: 'Inherit'
         }
       ]
     }
   },
   defaultProps: {
-    text: "Text",
-    variant: "body1",
-    align: "inherit"
+    text: 'Text',
+    variant: 'body1',
+    align: 'inherit'
   },
   render: (props) => {
     return (
