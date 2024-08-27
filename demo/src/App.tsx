@@ -10,7 +10,16 @@ const initialData = {};
 const save = () => {};
 
 function App() {
-  return <Puck config={config} data={initialData} onPublish={save} />;
+  return (
+    <Puck
+      config={config}
+      data={initialData}
+      onPublish={save}
+      iframe={{
+        enabled: false
+      }}
+    />
+  );
 }
 
 export default App;

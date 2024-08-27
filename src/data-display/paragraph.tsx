@@ -2,34 +2,34 @@ import React from "react";
 import { ComponentConfig } from "@measured/puck";
 import { Typography } from "@mui/material";
 
-export const Heading: ComponentConfig = {
-  label: "Heading",
+export const Paragraph: ComponentConfig = {
+  label: "Paragraph",
   fields: {
-    title: {
-      type: "text"
+    text: {
+      type: "textarea"
     },
     variant: {
       type: "select",
       options: [
         {
-          value: "h1",
-          label: "H1"
+          value: "body1",
+          label: "Body 1"
         },
         {
-          value: "h2",
-          label: "H2"
+          value: "body2",
+          label: "Body 2"
         },
         {
-          value: "h3",
-          label: "H3"
+          value: "subtitle1",
+          label: "Subtitle 1"
         },
         {
-          value: "h4",
-          label: "H4"
+          value: "caption",
+          label: "Caption"
         },
         {
-          value: "h5",
-          label: "H5"
+          value: "inherit",
+          label: "Inherit"
         },
         {
           value: "h6",
@@ -64,14 +64,14 @@ export const Heading: ComponentConfig = {
     }
   },
   defaultProps: {
-    title: "Heading",
-    variant: "h1",
+    text: "Text",
+    variant: "body1",
     align: "inherit"
   },
   render: (props) => {
     return (
       <Typography variant={props.variant} align={props.align}>
-        {props.title}
+        {props.text}
       </Typography>
     );
   }
