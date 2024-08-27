@@ -38,7 +38,7 @@ export const Heading: ComponentConfig = {
       ]
     },
     align: {
-      type: 'select',
+      type: 'radio',
       options: [
         {
           value: 'left',
