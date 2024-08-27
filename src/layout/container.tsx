@@ -6,7 +6,6 @@ export const Container: ComponentConfig = {
   label: 'Container',
   fields: {
     fixed: {
-
       type: 'radio',
       options: [
         {
