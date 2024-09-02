@@ -1,11 +1,12 @@
 import { Config } from '@measured/puck';
 import { Divider, Heading, Paragraph } from './data-display';
 import { Container } from './layout';
-import { Paper } from './surface';
+import { Accordion, Paper } from './surface';
 import { Button, ButtonGroup } from './inputs';
 
 export const config: Config = {
   components: {
+    accordion: Accordion,
     button: Button,
     'button-group': ButtonGroup,
     container: Container,
@@ -29,7 +30,7 @@ export const config: Config = {
     },
     surface: {
       title: 'Surface',
-      components: ['paper']
+      components: ['accordion', 'paper']
     }
   }
 };
