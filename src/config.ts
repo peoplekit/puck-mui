@@ -1,5 +1,5 @@
 import { Config } from '@measured/puck';
-import { Heading, Paragraph } from './data-display';
+import { Divider, Heading, Paragraph } from './data-display';
 import { Container } from './layout';
 import { Paper } from './surface';
 import { Button, ButtonGroup } from './inputs';
@@ -11,12 +11,13 @@ export const config: Config = {
     container: Container,
     heading: Heading,
     paper: Paper,
-    paragraph: Paragraph
+    paragraph: Paragraph,
+    divider: Divider
   },
   categories: {
     'data-display': {
       title: 'Data Display',
-      components: ['heading', 'paragraph']
+      components: ['heading', 'paragraph', 'divider']
     },
     inputs: {
       title: 'Inputs',
