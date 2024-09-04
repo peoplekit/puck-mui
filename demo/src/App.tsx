@@ -1,24 +1,28 @@
-import { Puck, Config } from '@measured/puck';
+import { Config, Puck } from '@measured/puck';
 import '@measured/puck/puck.css';
-import { config as c } from '../../src';
-import { Button } from '@mui/material';
-import { useState } from 'react';
-import Preview = Puck.Preview;
-const config: Config = c;
+import { config } from '../../src';
+import { useEffect, useState } from 'react';
 
-// Describe the initial data
 const initialData = {};
 
-// Save the data to your database
-const save = () => {};
+const onPublish = (data: any) => {
+  localStorage.setItem('dashboard', JSON.stringify(data));
+};
 
 function App() {
-  const [preview, setPreview] = useState(false);
-  return (
-    <Puck config={config} data={initialData} onPublish={save} renderHeaderActions={() => <Button onClick={() => setPreview(true)}>Preview</Button>}>
-      {preview && <Preview />}
-    </Puck>
-  );
+  const [data, setData] = useState<any>(undefined);
+  useEffect(() => {
+    const data = localStorage.getItem('dashboard');
+    if (data) {
+      setData(JSON.parse(data));
+    } else {
+      setData(initialData);
+    }
+  }, []);
+  if (!data) {
+    return null;
+  }
+  return <Puck config={config as Config} data={data} onPublish={onPublish} />;
 }
 
 export default App;
