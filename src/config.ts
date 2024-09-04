@@ -1,24 +1,25 @@
 import { Config } from '@measured/puck';
-import { Divider, Heading, Paragraph } from './data-display';
+import { PDivider, PHeading, PParagraph, PTypography } from './data-display';
 import { Container } from './layout';
 import { Accordion, Paper } from './surface';
 import { Button, ButtonGroup } from './inputs';
 
-export const config: Config = {
+export const config = {
   components: {
     accordion: Accordion,
     button: Button,
     'button-group': ButtonGroup,
     container: Container,
-    heading: Heading,
+    divider: PDivider,
+    heading: PHeading,
     paper: Paper,
-    paragraph: Paragraph,
-    divider: Divider
+    paragraph: PParagraph,
+    typography: PTypography
   },
   categories: {
     'data-display': {
       title: 'Data Display',
-      components: ['heading', 'paragraph', 'divider']
+      components: ['divider', 'heading', 'paragraph', 'typography']
     },
     inputs: {
       title: 'Inputs',

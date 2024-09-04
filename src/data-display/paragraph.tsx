@@ -2,7 +2,13 @@ import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Typography } from '@mui/material';
 
-export const Paragraph: ComponentConfig = {
+export type PParagraphProps = {
+  text: string;
+  variant: 'body1' | 'body2' | 'subtitle1' | 'caption' | 'inherit';
+  align: 'left' | 'center' | 'right' | 'justify' | 'inherit';
+};
+
+export const PParagraph: ComponentConfig<PParagraphProps> = {
   label: 'Paragraph',
   fields: {
     text: {
@@ -11,55 +17,21 @@ export const Paragraph: ComponentConfig = {
     variant: {
       type: 'select',
       options: [
-        {
-          value: 'body1',
-          label: 'Body 1'
-        },
-        {
-          value: 'body2',
-          label: 'Body 2'
-        },
-        {
-          value: 'subtitle1',
-          label: 'Subtitle 1'
-        },
-        {
-          value: 'caption',
-          label: 'Caption'
-        },
-        {
-          value: 'inherit',
-          label: 'Inherit'
-        },
-        {
-          value: 'h6',
-          label: 'H6'
-        }
+        { value: 'body1', label: 'Body 1' },
+        { value: 'body2', label: 'Body 2' },
+        { value: 'subtitle1', label: 'Subtitle 1' },
+        { value: 'caption', label: 'Caption' },
+        { value: 'inherit', label: 'Inherit' }
       ]
     },
     align: {
       type: 'radio',
       options: [
-        {
-          value: 'left',
-          label: 'Left'
-        },
-        {
-          value: 'center',
-          label: 'Center'
-        },
-        {
-          value: 'right',
-          label: 'Right'
-        },
-        {
-          value: 'justify',
-          label: 'Justify'
-        },
-        {
-          value: 'inherit',
-          label: 'Inherit'
-        }
+        { value: 'left', label: 'Left' },
+        { value: 'center', label: 'Center' },
+        { value: 'right', label: 'Right' },
+        { value: 'justify', label: 'Justify' },
+        { value: 'inherit', label: 'Inherit' }
       ]
     }
   },
@@ -68,10 +40,10 @@ export const Paragraph: ComponentConfig = {
     variant: 'body1',
     align: 'inherit'
   },
-  render: (props) => {
+  render: ({ text, variant, align }) => {
     return (
-      <Typography variant={props.variant} align={props.align}>
-        {props.text}
+      <Typography variant={variant} align={align}>
+        {text}
       </Typography>
     );
   }

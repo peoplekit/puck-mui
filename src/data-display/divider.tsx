@@ -1,38 +1,28 @@
 import React from 'react';
 import { ComponentConfig } from '@measured/puck';
-import { Divider as MUIDivider } from '@mui/material';
+import { Divider } from '@mui/material';
 
-export const Divider: ComponentConfig = {
+export type PDividerProps = {
+  variant: 'fullWidth' | 'inset' | 'middle';
+  orientation: 'horizontal' | 'vertical';
+};
+
+export const PDivider: ComponentConfig<PDividerProps> = {
   label: 'Divider',
   fields: {
     variant: {
       type: 'radio',
       options: [
-        {
-          value: 'fullWidth',
-          label: 'Full Width'
-        },
-        {
-          value: 'inset',
-          label: 'Inset'
-        },
-        {
-          value: 'middle',
-          label: 'Middle'
-        }
+        { label: 'Full Width', value: 'fullWidth' },
+        { label: 'Inset', value: 'inset' },
+        { label: 'Middle', value: 'middle' }
       ]
     },
     orientation: {
       type: 'radio',
       options: [
-        {
-          value: 'horizontal',
-          label: 'Horizontal'
-        },
-        {
-          value: 'vertical',
-          label: 'Vertical'
-        }
+        { label: 'Horizontal', value: 'horizontal' },
+        { label: 'Vertical', value: 'vertical' }
       ]
     }
   },
@@ -40,7 +30,7 @@ export const Divider: ComponentConfig = {
     variant: 'fullWidth',
     orientation: 'horizontal'
   },
-  render: (props) => {
-    return <MUIDivider variant={props.variant} orientation={props.orientation} />;
+  render: ({ variant, orientation }) => {
+    return <Divider variant={variant} orientation={orientation} />;
   }
 };

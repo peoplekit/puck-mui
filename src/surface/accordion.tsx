@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentConfig, DropZone } from '@measured/puck';
 import { Accordion as MUIAccordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
-import { Typography as T } from '../data-display/typography';
+import { PTypography } from '../data-display';
 
 export const Accordion: ComponentConfig = {
   label: 'Accordion',
@@ -34,18 +34,18 @@ export const Accordion: ComponentConfig = {
         }
       ]
     },
-    ...T.fields,
+    ...PTypography.fields
   },
   defaultProps: {
     defaultExpanded: false,
     disableGutters: false,
-    ...T.defaultProps
+    ...PTypography.defaultProps
   },
   render: (props) => {
     return (
       <MUIAccordion defaultExpanded={props.editMode || props.defaultExpanded} disableGutters={props.disableGutters}>
         <AccordionSummary>
-          <Typography {...props} children={props.text}/>
+          <Typography {...props} children={props.text} />
         </AccordionSummary>
         <AccordionDetails>
           <DropZone zone={`zone-${props.id}`} />

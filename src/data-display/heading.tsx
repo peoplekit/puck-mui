@@ -1,78 +1,51 @@
 import React from 'react';
 import { ComponentConfig } from '@measured/puck';
-import { Typography } from '@mui/material';
+import { Typography as MUITypography } from '@mui/material';
 
-export const Heading: ComponentConfig = {
+export type PHeadingProps = {
+  text: string;
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  align: 'left' | 'center' | 'right' | 'justify' | 'inherit';
+};
+
+export const PHeading: ComponentConfig<PHeadingProps> = {
   label: 'Heading',
   fields: {
-    title: {
+    text: {
       type: 'text'
     },
     variant: {
       type: 'select',
       options: [
-        {
-          value: 'h1',
-          label: 'H1'
-        },
-        {
-          value: 'h2',
-          label: 'H2'
-        },
-        {
-          value: 'h3',
-          label: 'H3'
-        },
-        {
-          value: 'h4',
-          label: 'H4'
-        },
-        {
-          value: 'h5',
-          label: 'H5'
-        },
-        {
-          value: 'h6',
-          label: 'H6'
-        }
+        { value: 'h1', label: 'H1' },
+        { value: 'h2', label: 'H2' },
+        { value: 'h3', label: 'H3' },
+        { value: 'h4', label: 'H4' },
+        { value: 'h5', label: 'H5' },
+        { value: 'h6', label: 'H6' }
       ]
     },
     align: {
       type: 'radio',
       options: [
-        {
-          value: 'left',
-          label: 'Left'
-        },
-        {
-          value: 'center',
-          label: 'Center'
-        },
-        {
-          value: 'right',
-          label: 'Right'
-        },
-        {
-          value: 'justify',
-          label: 'Justify'
-        },
-        {
-          value: 'inherit',
-          label: 'Inherit'
-        }
+        { value: 'left', label: 'Left' },
+        { value: 'center', label: 'Center' },
+        { value: 'right', label: 'Right' },
+        { value: 'justify', label: 'Justify' },
+        { value: 'inherit', label: 'Inherit' }
       ]
     }
   },
   defaultProps: {
-    title: 'Heading',
+    text: 'Heading',
     variant: 'h1',
     align: 'inherit'
   },
-  render: (props) => {
+  render: ({ text, variant, align }) => {
     return (
-      <Typography variant={props.variant} align={props.align}>
-        {props.title}
-      </Typography>
+      <MUITypography variant={variant} align={align}>
+        {text}
+      </MUITypography>
     );
   }
 };
