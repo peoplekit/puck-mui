@@ -1,7 +1,8 @@
-import { Config, Puck } from '@measured/puck';
+import { Config, Puck, Render } from '@measured/puck';
 import '@measured/puck/puck.css';
 import { config } from '../../src';
 import { useEffect, useState } from 'react';
+import { AppBar, Box, Button, Toolbar } from '@mui/material';
 
 const initialData = {};
 
@@ -11,6 +12,14 @@ const onPublish = (data: any) => {
 
 function App() {
   const [data, setData] = useState<any>(undefined);
+  const [preview, setPreview] = useState(false);
+  const [previewData, setPreviewData] = useState<any>(undefined);
+
+  const onPreview = (data: any) => {
+    setPreviewData(data);
+    setPreview(true);
+  };
+
   useEffect(() => {
     const data = localStorage.getItem('dashboard');
     if (data) {
@@ -22,7 +31,42 @@ function App() {
   if (!data) {
     return null;
   }
-  return <Puck config={config as Config} data={data} onPublish={onPublish} />;
+
+  if (preview) {
+    return (
+      <>
+        <AppBar sx={{ backgroundColor: 'white' }}>
+          <Toolbar>
+            <Box flexGrow={1} />
+            <Button variant='text' onClick={() => setPreview(false)}>
+              Edit
+            </Button>
+          </Toolbar>
+        </AppBar>
+        <Box sx={{ mt: '64px' }}>
+          <Render config={config as Config} data={previewData} />;
+        </Box>
+      </>
+    );
+  }
+
+  return (
+    <Puck
+      config={config as Config}
+      data={data}
+      onPublish={onPublish}
+      overrides={{
+        headerActions: (props) => {
+          return (
+            <>
+              <Button onClick={() => setPreview(true)}>Preview</Button>
+              {props.children}
+            </>
+          );
+        }
+      }}
+    />
+  );
 }
 
 export default App;
