@@ -2,10 +2,10 @@ import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Divider } from '@mui/material';
 
-export type PDividerProps = {
+export interface PDividerProps {
   variant: 'fullWidth' | 'inset' | 'middle';
   orientation: 'horizontal' | 'vertical';
-};
+}
 
 export const PDivider: ComponentConfig<PDividerProps> = {
   label: 'Divider',

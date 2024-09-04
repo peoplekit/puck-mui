@@ -2,11 +2,11 @@ import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Typography } from '@mui/material';
 
-export type PParagraphProps = {
+export interface PParagraphProps {
   text: string;
   variant: 'body1' | 'body2' | 'subtitle1' | 'caption' | 'inherit';
   align: 'left' | 'center' | 'right' | 'justify' | 'inherit';
-};
+}
 
 export const PParagraph: ComponentConfig<PParagraphProps> = {
   label: 'Paragraph',

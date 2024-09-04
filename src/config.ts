@@ -1,17 +1,17 @@
 import { PDivider, PHeading, PParagraph, PTypography } from './data-display';
-import { Container } from './layout';
-import { Accordion, Paper } from './surface';
+import { PContainer } from './layout';
+import { PAccordion, PPaper } from './surface';
 import { PButton, PButtonGroup } from './inputs';
 
 export const config = {
   components: {
-    accordion: Accordion,
+    accordion: PAccordion,
     button: PButton,
     'button-group': PButtonGroup,
-    container: Container,
+    container: PContainer,
     divider: PDivider,
     heading: PHeading,
-    paper: Paper,
+    paper: PPaper,
     paragraph: PParagraph,
     typography: PTypography
   },

@@ -3,13 +3,13 @@ import { ComponentConfig } from '@measured/puck';
 import { ButtonGroup, Button } from '@mui/material';
 import { PButton } from './button'; // Import your prefixed PButton
 
-export type PButtonGroupProps = {
+export interface PButtonGroupProps {
   variant: 'contained' | 'outlined' | 'text';
   color: 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success';
   size: 'small' | 'medium' | 'large';
   orientation: 'horizontal' | 'vertical';
   buttons: Array<typeof PButton.defaultProps>;
-};
+}
 
 export const PButtonGroup: ComponentConfig<PButtonGroupProps> = {
   label: 'Button Group',

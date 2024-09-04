@@ -2,11 +2,11 @@ import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Typography as MUITypography } from '@mui/material';
 
-export type PHeadingProps = {
+export interface PHeadingProps {
   text: string;
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   align: 'left' | 'center' | 'right' | 'justify' | 'inherit';
-};
+}
 
 export const PHeading: ComponentConfig<PHeadingProps> = {
   label: 'Heading',

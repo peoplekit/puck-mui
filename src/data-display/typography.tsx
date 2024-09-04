@@ -2,11 +2,11 @@ import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Typography } from '@mui/material';
 
-export type PTypographyProps = {
+export interface PTypographyProps {
   text: string;
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2' | 'subtitle1' | 'caption';
   align: 'left' | 'center' | 'right' | 'justify' | 'inherit';
-};
+}
 
 export const PTypography: ComponentConfig<PTypographyProps> = {
   label: 'Typography',

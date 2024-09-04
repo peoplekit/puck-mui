@@ -2,14 +2,14 @@ import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Button } from '@mui/material';
 
-export type PButtonProps = {
+export interface PButtonProps {
   text: string;
   variant: 'contained' | 'outlined' | 'text';
   color: 'primary' | 'secondary' | 'error' | 'warning' | 'info' | 'success';
   size: 'small' | 'medium' | 'large';
   fullWidth: boolean;
   disableElevation: boolean;
-};
+}
 
 export const PButton: ComponentConfig<PButtonProps> = {
   label: 'Button',

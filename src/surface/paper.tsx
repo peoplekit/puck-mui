@@ -1,21 +1,21 @@
 import React from 'react';
 import { ComponentConfig, DropZone } from '@measured/puck';
-import { Paper as MUIPaper } from '@mui/material';
+import { Paper } from '@mui/material';
 
-export const Paper: ComponentConfig = {
+export interface PPaperProps {
+  variant: 'elevation' | 'outlined';
+  elevation: number;
+  square: boolean;
+}
+
+export const PPaper: ComponentConfig<PPaperProps> = {
   label: 'Paper',
   fields: {
     variant: {
       type: 'radio',
       options: [
-        {
-          value: 'elevation',
-          label: 'Elevated'
-        },
-        {
-          value: 'outlined',
-          label: 'Outlined'
-        }
+        { value: 'elevation', label: 'Elevated' },
+        { value: 'outlined', label: 'Outlined' }
       ]
     },
     elevation: {
@@ -26,14 +26,8 @@ export const Paper: ComponentConfig = {
     square: {
       type: 'radio',
       options: [
-        {
-          value: true,
-          label: 'Square'
-        },
-        {
-          value: false,
-          label: 'Rounded'
-        }
+        { value: true, label: 'Square' },
+        { value: false, label: 'Rounded' }
       ]
     }
   },
@@ -42,11 +36,11 @@ export const Paper: ComponentConfig = {
     elevation: 1,
     square: false
   },
-  render: (props) => {
+  render: ({ variant, elevation, square, id }) => {
     return (
-      <MUIPaper variant={props.varient} square={props.squre} elevation={props.elevation}>
-        <DropZone zone={`zone-${props.id}`} />
-      </MUIPaper>
+      <Paper variant={variant} square={square} elevation={elevation}>
+        <DropZone zone={`zone-${id}`} />
+      </Paper>
     );
   }
 };
