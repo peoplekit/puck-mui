@@ -1,14 +1,13 @@
-import { Config } from '@measured/puck';
 import { PDivider, PHeading, PParagraph, PTypography } from './data-display';
 import { Container } from './layout';
 import { Accordion, Paper } from './surface';
-import { Button, ButtonGroup } from './inputs';
+import { PButton, PButtonGroup } from './inputs';
 
 export const config = {
   components: {
     accordion: Accordion,
-    button: Button,
-    'button-group': ButtonGroup,
+    button: PButton,
+    'button-group': PButtonGroup,
     container: Container,
     divider: PDivider,
     heading: PHeading,
