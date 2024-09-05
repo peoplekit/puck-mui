@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentConfig, DropZone } from '@measured/puck';
 import { Paper } from '@mui/material';
 

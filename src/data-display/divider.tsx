@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Divider } from '@mui/material';
 

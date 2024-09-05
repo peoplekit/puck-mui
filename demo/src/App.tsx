@@ -1,6 +1,6 @@
 import { Config, Puck, Render } from '@measured/puck';
 import '@measured/puck/puck.css';
-import { config } from '../../src';
+import { config } from 'puck-mui';
 import { useEffect, useState } from 'react';
 import { AppBar, Box, Button, Toolbar } from '@mui/material';
 

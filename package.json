@@ -1,8 +1,12 @@
 {
-  "name": "puck-mui-components",
+  "name": "puck-mui",
   "version": "0.0.1",
   "description": "MUI Components for the Puck Editor",
-  "main": "index.js",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "prettier": "prettier -l \"src/**/*.{ts,tsx}\" \"demo/**/*.{ts,tsx}\"",
@@ -25,6 +29,7 @@
   },
   "homepage": "https://github.com/peoplekit/puck-mui-components#readme",
   "peerDependencies": {
+    "react": "^16 || ^17 || ^18",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@measured/puck": "^0.15.0",
