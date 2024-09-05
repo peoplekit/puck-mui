@@ -50,7 +50,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           name: github-pages
-          path: ./dist
+          path: ./demo/dist
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
