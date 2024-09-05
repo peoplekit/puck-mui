@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { Typography as MUITypography } from '@mui/material';
 

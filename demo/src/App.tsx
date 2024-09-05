@@ -13,12 +13,6 @@ const onPublish = (data: any) => {
 function App() {
   const [data, setData] = useState<any>(undefined);
   const [preview, setPreview] = useState(false);
-  const [previewData, setPreviewData] = useState<any>(undefined);
-
-  const onPreview = (data: any) => {
-    setPreviewData(data);
-    setPreview(true);
-  };
 
   useEffect(() => {
     const data = localStorage.getItem('dashboard');
@@ -44,7 +38,7 @@ function App() {
           </Toolbar>
         </AppBar>
         <Box sx={{ mt: '64px' }}>
-          <Render config={config as Config} data={previewData} />;
+          <Render config={config as Config} data={{}} />;
         </Box>
       </>
     );

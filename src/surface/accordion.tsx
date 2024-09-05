@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentConfig, DropZone, Fields } from '@measured/puck';
 import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
 import { PTypography, PTypographyProps } from '../data-display';

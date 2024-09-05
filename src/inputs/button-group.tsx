@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentConfig } from '@measured/puck';
 import { ButtonGroup, Button } from '@mui/material';
 import { PButton } from './button'; // Import your prefixed PButton
