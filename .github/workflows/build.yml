@@ -12,6 +12,7 @@ jobs:
   build:
     permissions:
       pages: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
