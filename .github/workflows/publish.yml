@@ -1,0 +1,38 @@
+name: Publish NPM Package
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Extract version from Git tag
+        id: extract_tag
+        run: echo "::set-output name=VERSION::${GITHUB_REF/refs\/tags\/v/}"
+
+      - name: Update package.json version
+        run: |
+          NEW_VERSION=${{ steps.extract_tag.outputs.VERSION }}
+          npm version $NEW_VERSION --no-git-tag-version
+
+      - name: Build project
+        run: npm run build
+
+      - name: Publish to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
