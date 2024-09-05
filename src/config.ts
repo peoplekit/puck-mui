@@ -1,5 +1,5 @@
 import { PDivider, PHeading, PParagraph, PTypography } from './data-display';
-import { PContainer } from './layout';
+import { PColumns, PContainer } from './layout';
 import { PAccordion, PPaper } from './surface';
 import { PButton, PButtonGroup } from './inputs';
 
@@ -8,6 +8,7 @@ export const config = {
     accordion: PAccordion,
     button: PButton,
     'button-group': PButtonGroup,
+    columns: PColumns,
     container: PContainer,
     divider: PDivider,
     heading: PHeading,
@@ -26,7 +27,7 @@ export const config = {
     },
     layout: {
       title: 'Layout',
-      components: ['container']
+      components: ['columns', 'container']
     },
     surface: {
       title: 'Surface',
