@@ -40,7 +40,7 @@ Or using yarn:
 yarn install
 ```
 
-3. Run the Development Server
+### 3. Run the Development Server
 
 After the dependencies are installed, you can start the development server:
 

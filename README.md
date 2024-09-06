@@ -63,6 +63,38 @@ function App() {
 export default App;
 ```
 
+## Customization - Adding Your Own Components
+
+You can add your own custom components to the Puck editor by extending the `config` object with your own components. Here's an example of how to add a custom component to the editor:
+
+```tsx
+const customConfig = {
+  ...config,
+  components: {
+    ...config.components,
+    'custom-component': {
+      label: 'Custom Component',
+      fields: [...],
+      defaultProps: { ... },
+      render: (props) => {
+        return <CustomComponent {...props} />;
+      },
+    },
+  },
+};
+```
+
+Or import the desired component from puck-mui and add it to the `config` object:
+All Component matching the Material-UI component name with a prefix `P` are available in puck-mui.
+```tsx
+import { PDivider } from 'puck-mui';
+
+const config = {
+  components: {
+    divider: PDivider,
+  }
+};
+```
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute new components, features, or bug fixes to puck-mui, feel free to open an issue or submit a pull request.
