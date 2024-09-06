@@ -3,8 +3,7 @@ import '@measured/puck/puck.css';
 import { config } from 'puck-mui';
 import { useEffect, useState } from 'react';
 import { AppBar, Box, Button, Toolbar } from '@mui/material';
-
-const initialData = {};
+import * as initialData from './inital-data.json';
 
 const onPublish = (data: any) => {
   localStorage.setItem('dashboard', JSON.stringify(data));
@@ -22,6 +21,7 @@ function App() {
       setData(initialData);
     }
   }, []);
+
   if (!data) {
     return null;
   }
@@ -38,7 +38,7 @@ function App() {
           </Toolbar>
         </AppBar>
         <Box sx={{ mt: '64px' }}>
-          <Render config={config as Config} data={{}} />;
+          <Render config={config as Config} data={data} />;
         </Box>
       </>
     );
@@ -48,6 +48,7 @@ function App() {
     <Puck
       config={config as Config}
       data={data}
+      onChange={setData}
       onPublish={onPublish}
       overrides={{
         headerActions: (props) => {

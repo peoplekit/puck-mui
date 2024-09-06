@@ -1,0 +1,109 @@
+{
+  "root": {
+    "props": {}
+  },
+  "content": [
+    {
+      "type": "container",
+      "props": {
+        "maxWidth": "lg",
+        "fixed": false,
+        "id": "container-5a876cf2-1a81-48c7-9e81-772a11dd6dad"
+      }
+    }
+  ],
+  "zones": {
+    "container-5a876cf2-1a81-48c7-9e81-772a11dd6dad:zone-container-5a876cf2-1a81-48c7-9e81-772a11dd6dad": [
+      {
+        "type": "heading",
+        "props": {
+          "text": "Puck MUI Demo",
+          "variant": "h1",
+          "align": "inherit",
+          "id": "heading-8543cfb6-ed1b-41e4-9696-32a6d5b8d2c6"
+        }
+      },
+      {
+        "type": "divider",
+        "props": {
+          "variant": "fullWidth",
+          "orientation": "horizontal",
+          "id": "divider-9bd62b8e-d918-424a-97be-60b84bb2964b"
+        }
+      },
+      {
+        "type": "columns",
+        "props": {
+          "spacing": 3,
+          "distribution": "auto",
+          "columns": [
+            {},
+            {},
+            {}
+          ],
+          "id": "columns-50c12770-8267-4a16-bdde-dcccc6cf104a"
+        }
+      }
+    ],
+    "columns-50c12770-8267-4a16-bdde-dcccc6cf104a:column-0": [
+      {
+        "type": "card",
+        "props": {
+          "title": "Rich Typography and Layout Control",
+          "id": "card-13a27707-4e5a-4ecf-b25d-71f720e8a947"
+        }
+      }
+    ],
+    "columns-50c12770-8267-4a16-bdde-dcccc6cf104a:column-1": [
+      {
+        "type": "card",
+        "props": {
+          "title": "Dynamic Columns Layout",
+          "id": "card-5ae400a7-c26f-4059-a8fe-42ed7e9a3752"
+        }
+      }
+    ],
+    "columns-50c12770-8267-4a16-bdde-dcccc6cf104a:column-2": [
+      {
+        "type": "card",
+        "props": {
+          "title": "Divider for Clean Separation",
+          "id": "card-afd2e6f4-9244-4854-885e-eb79fcaf5033"
+        }
+      }
+    ],
+    "card-13a27707-4e5a-4ecf-b25d-71f720e8a947:zone-card-13a27707-4e5a-4ecf-b25d-71f720e8a947": [
+      {
+        "type": "typography",
+        "props": {
+          "text": "Enhance your project with customizable headings, paragraphs, and typography, while utilizing MUI’s grid and column layout system for precise control over content distribution.",
+          "variant": "body1",
+          "align": "center",
+          "id": "typography-4c37e59d-270f-4656-b4c7-15c060861c9d"
+        }
+      }
+    ],
+    "card-5ae400a7-c26f-4059-a8fe-42ed7e9a3752:zone-card-5ae400a7-c26f-4059-a8fe-42ed7e9a3752": [
+      {
+        "type": "typography",
+        "props": {
+          "text": "Easily create responsive multi-column layouts with flexible column spans. Choose between auto or manual distribution for precise control over the column structure.",
+          "variant": "body1",
+          "align": "center",
+          "id": "typography-0dfb820d-67e3-49a1-b18b-bf8354702468"
+        }
+      }
+    ],
+    "card-afd2e6f4-9244-4854-885e-eb79fcaf5033:zone-card-afd2e6f4-9244-4854-885e-eb79fcaf5033": [
+      {
+        "type": "typography",
+        "props": {
+          "text": "Use the Divider component to create clear visual separation between content sections, with customizable orientation and style options for a polished look.",
+          "variant": "body1",
+          "align": "center",
+          "id": "typography-f6fdc492-0dad-44fd-8e86-4956d90f86f8"
+        }
+      }
+    ]
+  }
+}
