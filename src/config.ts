@@ -1,6 +1,6 @@
 import { PDivider, PHeading, PParagraph, PTypography } from './data-display';
 import { PColumns, PContainer } from './layout';
-import { PAccordion, PPaper } from './surface';
+import { PAccordion, PCard, PPaper } from './surface';
 import { PButton, PButtonGroup } from './inputs';
 
 export const config = {
@@ -8,6 +8,7 @@ export const config = {
     accordion: PAccordion,
     button: PButton,
     'button-group': PButtonGroup,
+    card: PCard,
     columns: PColumns,
     container: PContainer,
     divider: PDivider,
@@ -31,7 +32,7 @@ export const config = {
     },
     surface: {
       title: 'Surface',
-      components: ['accordion', 'paper']
+      components: ['accordion', 'card', 'paper']
     }
   }
 };
