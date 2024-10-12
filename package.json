@@ -32,7 +32,7 @@
     "react": "^16 || ^17 || ^18",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
-    "@measured/puck": "^0.15.0",
+    "@measured/puck": "^0.16.1",
     "@mui/material": "^5.0.0||^6.0.0"
   },
   "devDependencies": {
